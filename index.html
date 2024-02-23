@@ -4,7 +4,7 @@
         <title> Vue.js Pet Depot</title>
         //Load Vue.js from a server
         <script src="https://unpkg.com/vue@2.7.8/dist/vue.js"></script>
-        <script src="products.js"></script>
+        <script src="product.js"></script>
         <link rel="manifest" href="petstore.webmanifest">
         <style>
             .product {
@@ -14,8 +14,14 @@
                 text-align: center;
             }
         </style>
+        <script>
+            if('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('servic-worker.js')
+            }
+        </script>
     </head>
     <body>
+        
         <!-- The element where Vue will mount-->
         <div id="app">
             <header>
